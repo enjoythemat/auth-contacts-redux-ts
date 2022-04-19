@@ -2,13 +2,13 @@
 
 Приложение создано благодаря [Create React App](https://github.com/facebook/create-react-app).
 
-## `npm i` или `yarn`
+## `npm i` или `yarn` -
 
-Установит в проект необходимые модули для первого запуска.
+установит в проект необходимые модули для первого запуска.
 
-### `npm start` или `yarn start`
+### `npm start` или `yarn start` -
 
-Запустит приложение на [http://localhost:3000](http://localhost:3000) в браузере.
+запустит приложение на [http://localhost:3000](http://localhost:3000) в браузере.
 
 ### Данные для авторизации
 
