@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC, useEffect } from 'react'
+import './App.css'
+import NavBar from './components/NavBar'
+import AppRouter from './components/AppRouter'
+import { useAction } from './hooks/useAction'
+import { User } from './store/reducers/auth/types'
 
-function App() {
+const App: FC = () => {
+  const { setAuth, setUser } = useAction()
+  useEffect(() => {
+    if (localStorage.getItem('auth')) {
+      setAuth(true)
+      setUser({username: localStorage.getItem('username')} as User)
+    }
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <NavBar />
+      <AppRouter />
+    </>
+  )
 }
 
-export default App;
+export default App
