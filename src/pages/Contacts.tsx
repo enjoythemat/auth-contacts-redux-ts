@@ -125,6 +125,7 @@ const Contacts: FC = () => {
         color="error"
         style={{marginTop: '1rem', marginLeft: '1rem'}}
         onClick={handleDeleteContact}
+        disabled={!idForEdit}
       >
         Удалить
       </Button>
